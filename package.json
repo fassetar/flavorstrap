@@ -1,8 +1,9 @@
 {
   "name": "flavorstrap",
   "version": "0.0.1",
-  "description": "Create flavors not themes with bootstrap! ",
-  "main": "Gruntfile.js",
+  "author": "Anthony Fassett",
+  "description": "Create flavors not themes with bootstrap!",
+  "main": "tasks/flavorstrap.js",
   "scripts": {
     "test": "grunt test"
   },
@@ -15,28 +16,38 @@
     "bootstrap",
     "css",
     "sass",
-    "less"
+    "less",
+    "compile",
+    "preprocess",
+    "style"
   ],
-  "author": "Anthony Fassett",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fassetar/flavorstrap/issues"
   },
   "homepage": "https://github.com/fassetar/flavorstrap",
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "^3.3.5",
     "bootstrap-sass": "^3.3.5",
-    "connect-livereload": "^0.5.3",
-    "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
-    "grunt-contrib-connect": "^0.10.1",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-watch": "^0.6.1",
     "grunt-css-purge": "0.0.3",
-    "grunt-import": "^0.1.7",
-    "grunt-open": "^0.2.3",
-    "grunt-sass": "^1.0.0",
-    "matchdep": "^0.3.0"
-  }
+    "grunt-sass": "^1.0.0"
+  },
+  "peerDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^0.4.1",
+    "grunt-contrib-jshint": "^0.1.1",
+    "grunt-contrib-nodeunit": "^0.1.2",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "files": [
+    "tasks"
+  ]
 }
