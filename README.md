@@ -1,4 +1,5 @@
 # flavorstrap
+[![Build Status](https://travis-ci.org/fassetar/flavorstrap.svg)](https://travis-ci.org/fassetar/flavorstrap)
 [![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg)](https://david-dm.org/fassetar/flavorstrap)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 

@@ -1,6 +1,6 @@
 {
   "name": "flavorstrap",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Anthony Fassett",
   "description": "Create flavors not themes with bootstrap!",
   "main": "tasks/flavorstrap.js",
@@ -23,7 +23,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "NonLicensed",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/fassetar/flavorstrap/issues"
   },
