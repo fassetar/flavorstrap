@@ -5,6 +5,8 @@
 
 Create flavors not themes with bootstrap!
 
+[![NPM](https://nodei.co/npm/flavorstrap.png)](https://npmjs.org/package/flavorstrap)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
