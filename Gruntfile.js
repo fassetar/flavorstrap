@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 	flavorstrap: {
 		target:{
 			files: {
-			  'dist/flavorstrap.css': 'src/flavorstrap.sass'
+			  'dist/flavorstrap.css': 'test/flavorstrap.sass'
 			}  
 		}
       }
