@@ -3,7 +3,7 @@
  * https://github.com/fassetar/flavorstrap
  *
  * Copyright (c) 2015 Anthony Fassett
- * Licensed under the MIT license.
+ * NonLicensed.
  */
 
 'use strict';
