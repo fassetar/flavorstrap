@@ -11,6 +11,9 @@
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-css-purge');
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
     var destFile = {};
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
         this.files.forEach(function (file) {
@@ -40,9 +43,38 @@ module.exports = function (grunt) {
                         'dist/flavorstrap.css': destFile
                     }
                 }
-            }            
+            },
+			css_purge: {
+				target: {
+					files: {
+						'dist/flavorstrapv2.css': 'dist/flavorstrap.css'
+					}
+				}
+			},
+			 autoprefixer: {    
+				target: {
+					files: {
+						'dist/flavorstrapv3.css': 'dist/flavorstrap.css'
+					}
+				}
+			 },
+			 cssmin: {
+			  options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1,
+				sourceMap: true
+			  },
+			  target: {
+				files: {
+				  'dist/flavorstrapv4.css': 'dist/flavorstrap.css'
+				}
+			  }
+			}
         });
 
         grunt.task.run('sass');        
+		grunt.task.run('css_purge');
+		grunt.task.run('autoprefixer');	
+		grunt.task.run('cssmin');	
     });
 };
