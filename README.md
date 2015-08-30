@@ -3,7 +3,7 @@
 [![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg)](https://david-dm.org/fassetar/flavorstrap)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
-Create flavors not themes with bootstrap!
+Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css but to organize your styles and take advantage of bootstrap's styles.
 
 [![NPM](https://nodei.co/npm/flavorstrap.png)](https://npmjs.org/package/flavorstrap)
 
