@@ -51,3 +51,18 @@ Create a sass file with the your scss files to extend or overeride bootstrap's c
 # Workflow
 
 <img src="https://docs.google.com/drawings/d/1N-ve67CCCUi9YOIZipHALPWvmOc2mHh1oyIkshWAenw/pub?w=960&amp;h=720">
+
+
+## Contributing
+Lint and test your code using the [Grunt](http://gruntjs.com/) task.
+
+## Release History
+* 0.0.6 - Added all the tasks (sass, purge, autoprefix, minify)
+* 0.0.5 - More refinements
+* 0.0.4 - Added Documents
+* 0.0.3 - Updated license
+* 0.0.2 - Refinements
+* 0.0.1 - Alpha test
+
+## License
+Copyright (c) 2015 Anthony Fassett. Licensed under the GPL-3.0.
