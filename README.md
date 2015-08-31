@@ -52,21 +52,6 @@ Create a sass file with the your scss files to extend or overeride bootstrap's c
 
 <img src="https://docs.google.com/drawings/d/1N-ve67CCCUi9YOIZipHALPWvmOc2mHh1oyIkshWAenw/pub?w=960&amp;h=720">
 
-# Example
-
-```override.scss
-their
-├──
-│  .panel-default { 
-│   
-│   
-└──
-
-├── js/
-├── c3.c3plus.js
-├── c3.c3plus.min.js
-└── c3.c3plus.min.js.map
-
 # Contributing
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
