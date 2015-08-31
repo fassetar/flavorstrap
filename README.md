@@ -35,8 +35,8 @@ grunt.initConfig({
 		files: {
 			'dist/flavorstrap.css':'src/flavorstrap.sass'
 		}
-    },
-  },
+    }
+  }
 })
 ```
 
