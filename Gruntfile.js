@@ -28,5 +28,5 @@ module.exports = function(grunt) {
   grunt.loadTasks('tasks'); 
 
   grunt.registerTask('test', ['clean', 'flavorstrap']);  
-  grunt.registerTask('default', ['jshint', 'test', 'flavorstrap']);
+  grunt.registerTask('default', [ 'flavorstrap']);
 };
