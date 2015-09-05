@@ -6,8 +6,6 @@
 
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles.
 
-[![NPM](https://nodei.co/npm/flavorstrap.png)](https://npmjs.org/package/flavorstrap)
-
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
