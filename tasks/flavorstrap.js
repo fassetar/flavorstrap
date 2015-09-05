@@ -9,13 +9,13 @@
 'use strict';
 
 module.exports = function (grunt) {
-	var temp = require("temp");
-	var fs    = require("fs");
-	temp.track(); // Cleanup files, please 
+    var temp = require("temp");
+    var fs = require("fs");
+    temp.track(); // Cleanup files, please 
     grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-css-purge');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-css-purge');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     var destFile = {};
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
         this.files.forEach(function (file) {
@@ -39,61 +39,61 @@ module.exports = function (grunt) {
         });
         grunt.log.writeln("test", destFile);
         grunt.initConfig({
-            sass: {                
+            sass: {
                 dist: {
                     files: {
                         'dist/flavorstrap.css': destFile
                     }
                 }
             },
-			css_purge: {
-				target: {
-					files: {
-						'dist/flavorstrapv2.css': 'dist/flavorstrap.css'
-					}
-				}
-			},
-			 autoprefixer: {    
-				target: {
-					files: {
-						'dist/flavorstrapv3.css': 'dist/flavorstrap.css'
-					}
-				}
-			 },
-			 cssmin: {
-			  options: {
-				shorthandCompacting: false,
-				roundingPrecision: -1,
-				sourceMap: true
-			  },
-			  target: {
-				files: {
-				  'dist/flavorstrapv4.css': 'dist/flavorstrap.css'
-				}
-			  }
-			}
+            css_purge: {
+                target: {
+                    files: {
+                        'dist/flavorstrapv2.css': 'dist/flavorstrap.css'
+                    }
+                }
+            },
+            autoprefixer: {
+                target: {
+                    files: {
+                        'dist/flavorstrapv3.css': 'dist/flavorstrap.css'
+                    }
+                }
+            },
+            cssmin: {
+                options: {
+                    shorthandCompacting: false,
+                    roundingPrecision: -1,
+                    sourceMap: true
+                },
+                target: {
+                    files: {
+                        'dist/flavorstrapv4.css': 'dist/flavorstrap.css'
+                    }
+                }
+            }
         });
 
-        grunt.task.run('sass');        
-		grunt.task.run('css_purge');
-		grunt.task.run('autoprefixer');	
-		grunt.task.run('cssmin');	
-		
-    // var done = this.async(); // Don't forget this! 
- 
-    // grunt.log.writeln("About to write a file...");
-    // temp.open('tempfile', function(err, info) {
-      // // File writing shenanigans here 
-      // grunt.log.writeln("Wrote a file!") 
-      // done(); // REALLY don't forget this! 				
-  // if (!err) {
-    // fs.write(info.fd, myData);
-    // fs.close(info.fd, function(err) {
-      // exec("grep foo '" + info.path + "' | wc -l", function(err, stdout) {
+        grunt.task.run('sass');
+        grunt.task.run('css_purge');
+        grunt.task.run('autoprefixer');
+        grunt.task.run('cssmin');
+
+        // var done = this.async(); // Don't forget this! 
+
+        // grunt.log.writeln("About to write a file...");
+        // temp.open('tempfile', function(err, info) {
+        // // File writing shenanigans here 
+        // grunt.log.writeln("Wrote a file!") 
+        // done(); // REALLY don't forget this! 				
+        // if (!err) {
+        // fs.write(info.fd, myData);
+        // fs.close(info.fd, function(err) {
+        // exec("grep foo '" + info.path + "' | wc -l", function(err, stdout) {
         // util.puts(stdout.trim());
-      // });
-    // });
-  // }
-// });
-    // });
+        // });
+        // });
+        // }
+        // });
+    });
 };
