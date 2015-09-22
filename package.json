@@ -18,7 +18,7 @@
     "sass",
     "compile",
     "preprocess",
-    "style"
+    "gruntplugin"
   ],
   "engines": {
     "node": ">=0.10.0"
@@ -32,10 +32,11 @@
     "bootstrap-sass": "^3.3.5",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
-    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-cssmin": "^0.14.0",
     "grunt-css-purge": "0.0.3",
     "grunt-sass": "^1.0.0",
-    "temp": "^0.8.3"
+    "temp": "^0.8.3",
+    "tmp": "0.0.27"
   },
   "devDependencies": {
     "grunt-contrib-clean": "^0.6.0",

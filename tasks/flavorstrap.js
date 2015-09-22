@@ -42,21 +42,21 @@ module.exports = function (grunt) {
             sass: {
                 dist: {
                     files: {
-                        'dist/flavorstrap.css': destFile
+                        'dist/flavorstrap.sassed.css': destFile
                     }
                 }
             },
             css_purge: {
                 target: {
                     files: {
-                        'dist/flavorstrapv2.css': 'dist/flavorstrap.css'
+                        'dist/flavorstrap.purged.css': 'dist/flavorstrap.sassed.css'
                     }
                 }
             },
             autoprefixer: {
                 target: {
                     files: {
-                        'dist/flavorstrapv3.css': 'dist/flavorstrap.css'
+                        'dist/flavorstrap.css': 'dist/flavorstrap.purged.css'
                     }
                 }
             },
@@ -68,7 +68,7 @@ module.exports = function (grunt) {
                 },
                 target: {
                     files: {
-                        'dist/flavorstrapv4.css': 'dist/flavorstrap.css'
+                        'dist/flavorstrapv.min.css': 'dist/flavorstrap.css'
                     }
                 }
             }
