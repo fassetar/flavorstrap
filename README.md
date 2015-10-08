@@ -1,8 +1,8 @@
 # flavorstrap (beta)
-[![npm version](https://badge.fury.io/js/flavorstrap.svg?style=flat-square)](http://badge.fury.io/js/flavorstrap)
-[![Travis](https://img.shields.io/travis/fassetar/flavorstrap.svg?style=flat-square)](https://travis-ci.org/fassetar/flavorstrap)
-[![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg?style=flat-square)](https://david-dm.org/fassetar/flavorstrap)
-[![npm](https://img.shields.io/npm/fassetar/flavorstrap.svg?style=flat-square)](http://npm-stat.com/charts.html?package=flavorstrap&author=fassetar)
+[![npm version](https://badge.fury.io/js/flavorstrap.svg)](http://badge.fury.io/js/flavorstrap)
+[![Build Status](https://travis-ci.org/fassetar/flavorstrap.svg)](https://travis-ci.org/fassetar/flavorstrap)
+[![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg)](https://david-dm.org/fassetar/flavorstrap)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles.
 
