@@ -6,6 +6,10 @@
 
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles.
 
+##Gulp Version
+
+[Gulp](https://github.com/fassetar/flavorstrap/tree/gulp)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
