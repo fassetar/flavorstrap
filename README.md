@@ -1,4 +1,4 @@
-# flavorstrap (beta)
+# flavorstrap
 [![npm version](https://badge.fury.io/js/flavorstrap.svg)](http://badge.fury.io/js/flavorstrap)
 [![Build Status](https://travis-ci.org/fassetar/flavorstrap.svg)](https://travis-ci.org/fassetar/flavorstrap)
 [![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg)](https://david-dm.org/fassetar/flavorstrap)
@@ -7,7 +7,7 @@
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles.
 
 ##Gulp Version
-
+coming soon?
 [Gulp](https://github.com/fassetar/flavorstrap/tree/gulp)
 
 ## Getting Started
