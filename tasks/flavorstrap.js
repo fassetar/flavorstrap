@@ -9,56 +9,37 @@
 'use strict';
 
 module.exports = function (grunt) {
-    var temp = require("temp");
-    var fs = require("fs");
-    temp.track(); // Cleanup files, please 	
     require('grunt-sass/tasks/sass')(grunt);
-	require('grunt-css-purge/tasks/css_purge')(grunt);	
-	require('grunt-autoprefixer/tasks/autoprefixer')(grunt);        
-	require('grunt-contrib-cssmin/tasks/cssmin')(grunt);            
-	
-    var destFile = {};
-    grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
-        this.files.forEach(function (file) {
-            var contents = file.src.filter(function (filepath) {
-                // Remove nonexistent files (it's up to you to filter or warn here).
-                if (!grunt.file.exists(filepath)) {
-                    grunt.log.warn('Source file "' + filepath + '" not found.');
-                    return false;
-                } else {
-                    return true;
-                }
-            }).map(function (filepath) {
-                // Read and return the file's source.
-                return grunt.file.read(filepath);
-            }).join('\n');
-            // Write joined contents to destination filepath.
-            grunt.file.write(file.dest, contents);
-            // Print a success message.            
-            grunt.log.writeln('File "' + file.dest + '" created.');
-            destFile = file.orig.src;
-        });
-        grunt.log.writeln("test", destFile);
+    require('grunt-css-purge/tasks/css_purge')(grunt);
+    require('grunt-autoprefixer/tasks/autoprefixer')(grunt);
+    require('grunt-contrib-cssmin/tasks/cssmin')(grunt);
+
+    grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {        
+
+        grunt.log.writeflags(grunt.config.get('flavorstrap'));
+        grunt.log.writeln(grunt.config.get('flavorstrap.target.files').dest);
+        var tes = grunt.config.get('flavorstrap.target.files');
+        
         grunt.initConfig({
             sass: {
                 dist: {
-                    files: {
-                        'dist/flavorstrap.sassed.css': destFile
-                    }
+                    files: [{                   
+                        src: tes.src, dest: tes.dest
+                    }]
                 }
             },
             css_purge: {
                 target: {
-                    files: {
-                        'dist/flavorstrap.purged.css': 'dist/flavorstrap.sassed.css'
-                    }
+                    files: [{
+                        src: tes.dest, dest: tes.dest
+                    }]
                 }
             },
             autoprefixer: {
                 target: {
-                    files: {
-                        'dist/flavorstrap.css': 'dist/flavorstrap.purged.css'
-                    }
+                    files: [{
+                        src: tes.dest, dest: tes.dest
+                    }]
                 }
             },
             cssmin: {
@@ -68,9 +49,10 @@ module.exports = function (grunt) {
                     sourceMap: true
                 },
                 target: {
-                    files: {
-                        'dist/flavorstrapv.min.css': 'dist/flavorstrap.css'
-                    }
+                    files: [{
+                        src: tes.dest,
+                        dest: tes.dest
+                    }]
                 }
             }
         });
@@ -79,5 +61,7 @@ module.exports = function (grunt) {
         grunt.task.run('css_purge');
         grunt.task.run('autoprefixer');
         grunt.task.run('cssmin');
+        // Print a success message.            
+        //grunt.log.writeln('File "' + destFile + '" created.');
     });
 };
