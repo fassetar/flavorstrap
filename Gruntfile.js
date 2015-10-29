@@ -14,11 +14,15 @@ module.exports = function (grunt) {
         clean: {
             tests: ['tmp']
         },
-        flavorstrap: {
+        flavorstrap: {			
             target: {
+				options: {
+					debug: true,
+					fast: true
+				},
                 files:
                   {                      
-                      src: 'test/flavorstrap.sass',
+                      src: 'test/flavorstrap.scss',
                       dest: 'dist/flavorstrap.css'
                   }
             }
