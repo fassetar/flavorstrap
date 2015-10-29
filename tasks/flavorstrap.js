@@ -61,7 +61,7 @@ module.exports = function (grunt) {
         });
 
         grunt.task.run('sass');		
-		if(!options.fast) //Don't run is fast mode. 
+		if(!options.fast) //Don't run in fast mode. 
 		{
 			grunt.task.run('css_purge');
 			grunt.task.run('autoprefixer');		
