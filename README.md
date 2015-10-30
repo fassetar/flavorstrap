@@ -53,7 +53,7 @@ Create a scss file with the your scss files to extend or overeride bootstrap's c
 Type: `Boolean`  
 Default: false
 
-This overrides this task from blocking deletion of folders outside current working dir (CWD). Use with caution.
+This field is recommended for using with a watch task, rather than run through all the steps during development.
 
 #### debug
 Type: `Boolean`  
