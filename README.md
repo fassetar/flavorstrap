@@ -31,7 +31,6 @@ grunt.initConfig({
     options: {
       		fast: false,
       		debug: false
-		
     },
     target: {
 		files: {
