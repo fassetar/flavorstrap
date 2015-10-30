@@ -29,12 +29,13 @@ _Run this task with the `grunt flavorstrap` command._
 grunt.initConfig({
   flavorstrap: {
     options: {
-      // Task-specific options go here.
+      	fast: false,
+      	debug: false
     },
     target: {
-		files: {
-			'dist/flavorstrap.css':'src/flavorstrap.scss'
-		}
+	files: {
+		'dist/flavorstrap.css':'src/flavorstrap.scss'
+	}
     }
   }
 })
