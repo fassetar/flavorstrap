@@ -23,6 +23,7 @@ grunt.loadNpmTasks('flavorstrap');
 
 ### Overview
 In your project's Gruntfile, add a section named `flavorstrap` to the data object passed into `grunt.initConfig()`.
+_Run this task with the `grunt flavorstrap` command._
 
 ```js
 grunt.initConfig({
@@ -32,7 +33,7 @@ grunt.initConfig({
     },
     target: {
 		files: {
-			'dist/flavorstrap.css':'src/flavorstrap.sass'
+			'dist/flavorstrap.css':'src/flavorstrap.scss'
 		}
     }
   }
@@ -41,11 +42,25 @@ grunt.initConfig({
 
 Create a scss file with the your scss files to extend or overeride bootstrap's css.
 
-```flavorstrap.sass
+```flavorstrap.scss
 @import "override.scss";
 @import "node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
 @import "extend.scss";
 ```
+### Options
+
+#### fast
+Type: `Boolean`  
+Default: false
+
+This overrides this task from blocking deletion of folders outside current working dir (CWD). Use with caution.
+
+#### debug
+Type: `Boolean`  
+Default: false
+
+This will print out all the steps for each modified css, for example the purged version and etc.
+
 
 # Workflow
 
