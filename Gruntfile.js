@@ -18,13 +18,13 @@ module.exports = function (grunt) {
             target: {
 				options: {
 					debug: true,
-					fast: true
+					fast: false
 				},
                 files:
-                  {                      
-                      src: 'test/flavorstrap.scss',
-                      dest: 'dist/flavorstrap.css'
-                  }
+                {                      
+                    src: 'test/flavorstrap.scss',
+                    dest: 'dist/flavorstrap.css'
+                }
             }
         }
     });

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 	'use strict';
     require('grunt-sass/tasks/sass')(grunt);
     require('grunt-css-purge/tasks/css_purge')(grunt);
-    require('grunt-autoprefixer/tasks/autoprefixer')(grunt);
+    require('grunt-postcss/tasks/postcss')(grunt);
     require('grunt-contrib-cssmin/tasks/cssmin')(grunt);
 
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {        
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 		var options = {
 			fast: (grunt.config.get('flavorstrap.target.options').fast)? true : false,
 			debug: (grunt.config.get('flavorstrap.target.options').debug) ? true: false			
-		};        
+		};        		
 		if(options.debug){
 			files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
 			grunt.log.writeln(files.dest);
@@ -40,13 +40,18 @@ module.exports = function (grunt) {
                     }]
                 }
             },
-            autoprefixer: {
-                target: {
-                    files: [{
-                        dest: (options.debug) ? (files.dest + '.prefixed.css'): files.dest, src: (options.debug) ? (files.dest+'.purged.css'): files.dest
-                    }]
-                }
-            },
+			postcss: {
+			  options: {				
+				processors: [
+				  require('autoprefixer')({browsers: ['last 1 version']})
+				]
+			  },
+        	  target: {
+				files: [{
+					dest: (options.debug) ? (files.dest + '.prefixed.css'): files.dest, src: (options.debug) ? (files.dest+'.purged.css'): files.dest
+				}]
+			  }
+			},            
             cssmin: {
                 options: {
                     shorthandCompacting: false,
@@ -65,7 +70,7 @@ module.exports = function (grunt) {
 		if(!options.fast) //Don't run in fast mode. 
 		{
 			grunt.task.run('css_purge');
-			grunt.task.run('autoprefixer');		
+			grunt.task.run('postcss');		
 			grunt.task.run('cssmin');        
 		}
     });
