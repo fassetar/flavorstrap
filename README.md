@@ -62,6 +62,10 @@ Default: false
 
 This will print out all the steps for each modified css, for example the purged version and etc.
 
+#Multiple Flavor in a single project!
+You can use this project to group all your style development, having just a single grunt project with seperate flavor folders.
+Better documentation coming soon...
+
 
 # Workflow
 
@@ -71,6 +75,10 @@ This will print out all the steps for each modified css, for example the purged 
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
 ## Release History
+* 0.1.0 - Updated to postcss and bootstrap 3.3.6
+* 0.0.9 - added options (debug,fast).
+* 0.0.8 - rewrote task to reuse existing grunt file.
+* 0.0.7 - fixed npm readme
 * 0.0.6 - Added all the tasks (sass, purge, autoprefix, minify)
 * 0.0.5 - More refinements
 * 0.0.4 - Added Documents
