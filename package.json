@@ -35,14 +35,14 @@
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-css-purge": "0.0.3",
     "grunt-sass": "^1.0.0",
-    "grunt-contrib-clean": "^0.7.0"
+    "grunt-postcss": "^0.7.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.1.2",
     "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-nodeunit": "^0.4.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.7.1"
+    "grunt-contrib-watch": "^0.6.1"
   },
   "files": [
     "tasks"
