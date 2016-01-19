@@ -41,7 +41,7 @@ grunt.initConfig({
 });
 ```
 
-Create a scss file with the your scss files to extend or overeride bootstrap's css.
+Create a scss file with your scss files to extend or overeride bootstrap's css.
 
 ```flavorstrap.scss
 @import "override.scss";
