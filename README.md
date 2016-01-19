@@ -45,7 +45,7 @@ Create a scss file with the your scss files to extend or overeride bootstrap's c
 
 ```flavorstrap.scss
 @import "override.scss";
-@import "node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
+@import "bootstrap.scss";
 @import "extend.scss";
 ```
 ### Options
