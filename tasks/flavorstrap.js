@@ -7,51 +7,55 @@
  */
 
 module.exports = function (grunt) {
-	'use strict';
+    'use strict';
     require('grunt-sass/tasks/sass')(grunt);
     require('grunt-css-purge/tasks/css_purge')(grunt);
     require('grunt-postcss/tasks/postcss')(grunt);
     require('grunt-contrib-cssmin/tasks/cssmin')(grunt);
 
-    grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {        
+    grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
 
-	grunt.log.writeflags(grunt.config.get('flavorstrap')); 
+        grunt.log.writeflags(grunt.config.get('flavorstrap'));
         var files = grunt.config.get('flavorstrap.target.files');
-		var options = {
-			fast: (grunt.config.get('flavorstrap.target.options').fast)? true : false,
-			debug: (grunt.config.get('flavorstrap.target.options').debug) ? true: false			
-		};        		
-		if(options.debug){
-			files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
-			grunt.log.writeln(files.dest);
-		}
+        var options = {
+            fast: (grunt.config.get('flavorstrap.target.options').fast) ? true : false,
+            debug: (grunt.config.get('flavorstrap.target.options').debug) ? true : false
+        };
+        if (options.debug) {
+            files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
+            grunt.log.writeln(files.dest);
+        }
         grunt.initConfig({
             sass: {
                 target: {
-                    files: [{                   
-                         dest: (options.debug) ? (files.dest + '.sassed.css') : files.dest, src: files.src
+                    files: [{
+                        dest: (options.debug) ? (files.dest + '.sassed.css') : files.dest, src: files.src
                     }]
-                }
+                },
+                options: {
+                    //For both package testing and development.
+                    includePaths: ['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/']
+                },
             },
             css_purge: {
                 target: {
                     files: [{
-                        dest: (options.debug) ? (files.dest + '.purged.css'): files.dest, src: (options.debug) ? (files.dest+'.sassed.css'): files.dest
+                        dest: (options.debug) ? (files.dest + '.purged.css') : files.dest, src: (options.debug) ? (files.dest + '.sassed.css') : files.dest
                     }]
                 }
             },
-			postcss: {
-			  options: {				
-				processors: [
-				  require('autoprefixer')({browsers: ['last 2 version']})
-				]
-			  },
-        	  target: {
-				files: [{
-					dest: (options.debug) ? (files.dest + '.prefixed.css'): files.dest, src: (options.debug) ? (files.dest+'.purged.css'): files.dest
-				}]
-			  }
-			},            
+            postcss: {
+                options: {
+                    processors: [
+                      require('autoprefixer')({ browsers: ['last 2 version'] })
+                    ]
+                },
+                target: {
+                    files: [{
+                        dest: (options.debug) ? (files.dest + '.prefixed.css') : files.dest, src: (options.debug) ? (files.dest + '.purged.css') : files.dest
+                    }]
+                }
+            },
             cssmin: {
                 options: {
                     shorthandCompacting: false,
@@ -60,18 +64,18 @@ module.exports = function (grunt) {
                 },
                 target: {
                     files: [{
-                        dest: (options.debug)? (files.dest + '.min.css'): files.dest, src: (options.debug) ? (files.dest+'.prefixed.css'): files.dest
+                        dest: (options.debug) ? (files.dest + '.min.css') : files.dest, src: (options.debug) ? (files.dest + '.prefixed.css') : files.dest
                     }]
                 }
             }
         });
 
-        grunt.task.run('sass');		
-		if(!options.fast) //Don't run in fast mode. 
-		{
-			grunt.task.run('css_purge');
-			grunt.task.run('postcss');		
-			grunt.task.run('cssmin');        
-		}
+        grunt.task.run('sass');
+        if (!options.fast) //Don't run in fast mode. 
+        {
+            grunt.task.run('css_purge');
+            grunt.task.run('postcss');
+            grunt.task.run('cssmin');
+        }
     });
 };
