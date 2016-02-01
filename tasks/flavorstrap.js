@@ -15,13 +15,13 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
 
-        grunt.log.writeflags(grunt.config.get('flavorstrap'));
         var files = grunt.config.get('flavorstrap.target.files');
         var options = {
             fast: (grunt.config.get('flavorstrap.target.options').fast) ? true : false,
             debug: (grunt.config.get('flavorstrap.target.options').debug) ? true : false
         };
         if (options.debug) {
+            grunt.log.writeflags(grunt.config.get('flavorstrap'));
             files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
             grunt.log.writeln(files.dest);
         }

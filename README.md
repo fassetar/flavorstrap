@@ -41,11 +41,11 @@ grunt.initConfig({
 });
 ```
 
-Create a scss file with the your scss files to extend or overeride bootstrap's css.
+Create a scss file with your scss files to extend or overeride bootstrap's css.
 
 ```flavorstrap.scss
 @import "override.scss";
-@import "node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
+@import "bootstrap.scss";
 @import "extend.scss";
 ```
 ### Options
@@ -75,6 +75,8 @@ Better documentation coming soon...
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
 ## Release History
+* 0.1.2 - Shortened bootstrap reference.
+* 0.1.1 - Fixed postcss issue and npm warning
 * 0.1.0 - Updated to postcss and bootstrap 3.3.6
 * 0.0.9 - added options (debug,fast).
 * 0.0.8 - rewrote task to reuse existing grunt file.
