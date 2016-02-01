@@ -1,4 +1,4 @@
-# flavorstrap
+<h1><img src="https://raw.githubusercontent.com/fassetar/flavorstrap/master/logo.png">flavorstrap</h1>
 [![npm version](https://badge.fury.io/js/flavorstrap.svg)](http://badge.fury.io/js/flavorstrap)
 [![Build Status](https://travis-ci.org/fassetar/flavorstrap.svg?branch=master)](https://travis-ci.org/fassetar/flavorstrap)
 [![Dependency Status](https://david-dm.org/fassetar/flavorstrap.svg)](https://david-dm.org/fassetar/flavorstrap)
