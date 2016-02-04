@@ -77,6 +77,7 @@ Better documentation coming soon...
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
 ## Release History
+* 0.1.3 - Updated documents.
 * 0.1.2 - Shortened bootstrap reference.
 * 0.1.1 - Fixed postcss issue and npm warning
 * 0.1.0 - Updated to postcss and bootstrap 3.3.6
