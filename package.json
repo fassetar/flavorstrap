@@ -1,6 +1,6 @@
 {
   "name": "flavorstrap",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Anthony Fassett",
   "description": "Create flavors not themes with bootstrap!",
   "main": "tasks/flavorstrap.js",

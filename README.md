@@ -78,6 +78,7 @@ Better documentation coming soon...
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
 ## Release History
+* 0.1.4 - Fixed badge issue.
 * 0.1.3 - Updated documents.
 * 0.1.2 - Shortened bootstrap reference.
 * 0.1.1 - Fixed postcss issue and npm warning
