@@ -18,8 +18,12 @@ module.exports = function (grunt) {
         var files = grunt.config.get('flavorstrap.target.files');
         var options = {
             fast: (grunt.config.get('flavorstrap.target.options').fast) ? true : false,
-            debug: (grunt.config.get('flavorstrap.target.options').debug) ? true : false
+            debug: (grunt.config.get('flavorstrap.target.options').debug) ? true : false,
+            includePaths: grunt.config.get('flavorstrap.target.options').includePaths
         };
+        //For both package testing and development.
+        var defaultPaths = '';//['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/'];
+
         if (options.debug) {
             grunt.log.writeflags(grunt.config.get('flavorstrap'));
             files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
@@ -32,9 +36,8 @@ module.exports = function (grunt) {
                         dest: (options.debug) ? (files.dest + '.sassed.css') : files.dest, src: files.src
                     }]
                 },
-                options: {
-                    //For both package testing and development.
-                    includePaths: ['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/']
+                options: {                    
+                    includePaths: (options.includePaths) ? options.includePaths : defaultPaths
                 },
             },
             css_purge: {
