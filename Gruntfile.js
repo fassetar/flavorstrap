@@ -18,7 +18,8 @@ module.exports = function (grunt) {
             target: {
 				options: {
 					debug: true,
-					fast: false
+					fast: false,
+					includePaths: [ "/ExampleFontawesome"]
 				},
                 files:
                 {                      

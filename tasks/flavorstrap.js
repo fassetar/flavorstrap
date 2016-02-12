@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     }]
                 },
                 options: {                    
-                    includePaths: (options.includePaths) ? options.includePaths : defaultPaths
+                    includePaths: (options.includePaths) ? options.includePaths.concat(defaultPaths) : defaultPaths
                 },
             },
             css_purge: {
