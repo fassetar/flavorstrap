@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             includePaths: grunt.config.get('flavorstrap.target.options').includePaths
         };
         //For both package testing and development.
-        var defaultPaths = '';//['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/'];
+        var defaultPaths = ['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/'];
 
         if (options.debug) {
             grunt.log.writeflags(grunt.config.get('flavorstrap'));
