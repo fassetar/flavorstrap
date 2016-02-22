@@ -33,7 +33,8 @@ grunt.initConfig({
   flavorstrap: {
     options: {
       		fast: false,
-      		debug: false
+      		debug: false,
+      		includePaths: ['']
     },
     target: {
 		files: {
@@ -64,6 +65,11 @@ Type: `Boolean`
 Default: false
 
 This will print out all the steps for each modified css, for example the purged version and etc.
+
+#### includePaths
+Type: 'Array'
+
+This will include paths for the sass compiler. 
 
 #Multiple Flavor in a single project!
 You can use this project to group all your style development, having just a single grunt project with seperate flavor folders.
