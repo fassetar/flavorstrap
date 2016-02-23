@@ -67,7 +67,7 @@ Default: false
 This will print out all the steps for each modified css, for example the purged version and etc.
 
 #### includePaths
-Type: 'Array'
+Type: `Array`
 
 This will include paths for the sass compiler. 
 
