@@ -1,6 +1,6 @@
 {
   "name": "flavorstrap",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Anthony Fassett",
   "description": "Create flavors not themes with bootstrap!",
   "main": "tasks/flavorstrap.js",
@@ -38,8 +38,8 @@
     "grunt-sass": "^1.0.0"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.12.0",
-    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^0.4.1",
     "grunt-contrib-watch": "^0.6.1"
   },

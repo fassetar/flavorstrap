@@ -1,8 +1,8 @@
 <h1><img src="https://raw.githubusercontent.com/fassetar/flavorstrap/master/logo.png">flavorstrap</h1>
 <a href="http://badge.fury.io/js/flavorstrap"><img src="https://badge.fury.io/js/flavorstrap.svg">
 <a href="https://travis-ci.org/fassetar/flavorstrap"><img src="https://travis-ci.org/fassetar/flavorstrap.svg?branch=master">
-<a href="https://david-dm.org/fassetar/flavorstrap"><img src="https://david-dm.org/fassetar/flavorstrap.svg">
-<a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.png"></a>
+<a href="https://david-dm.org/fassetar/flavorstrap"><img src="https://david-dm.org/fassetar/flavorstrap.svg">  
+<a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.svg"></a>
 
 
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles. For a more [ in-depth documentation](http://anthonyfassett.blogspot.com/2015/12/flavorstrap-npm-package-in-depth.html) and an example look here.
@@ -84,6 +84,7 @@ Better documentation coming soon...
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
 ## Release History
+* 0.1.5 - Added IncludePaths options.
 * 0.1.4 - Fixed badge issue.
 * 0.1.3 - Updated documents.
 * 0.1.2 - Shortened bootstrap reference.
