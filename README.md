@@ -9,6 +9,8 @@ Create flavors not themes with bootstrap! This package will allow you to create 
 
 Bootstrap v4 found [here](https://github.com/fassetar/flavorstrap/tree/v4-dev)
 
+Project [Stats](http://npm-stat.com/charts.html?package=flavorstrap&author=fassetar)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
