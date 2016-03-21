@@ -5,7 +5,7 @@
 <a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.svg"/></a>
 
 
-Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles. For a more [ in-depth documentation](http://anthonyfassett.blogspot.com/2015/12/flavorstrap-npm-package-in-depth.html) and an example look here. This project bundles packages that work out this idea, the same could be done without this package but requires more configuration.
+Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles. For a more [ in-depth documentation](http://anthonyfassett.blogspot.com/2015/12/flavorstrap-npm-package-in-depth.html) and an example this project's test folder. This project bundles packages that work out this idea, the same could be done without this package but requires more configuration.
 
 Bootstrap v4 found [here](https://github.com/fassetar/flavorstrap/tree/v4-dev)
 
