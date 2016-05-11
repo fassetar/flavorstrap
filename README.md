@@ -39,9 +39,9 @@ grunt.initConfig({
       	includePaths: ['']
     },
     target: {
-	files: {
-		'dist/flavorstrap.css':'src/flavorstrap.scss'
-	}
+        files: {
+                'dist/flavorstrap.css':'src/flavorstrap.scss'
+       }
     }
   }
 });
