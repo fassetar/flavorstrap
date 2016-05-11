@@ -34,14 +34,14 @@ _Run this task with the `grunt flavorstrap` command._
 grunt.initConfig({
   flavorstrap: {
     options: {
-      		fast: false,
-      		debug: false,
-      		includePaths: ['']
+   	fast: false,
+      	debug: false,
+      	includePaths: ['']
     },
     target: {
-		files: {
-			'dist/flavorstrap.css':'src/flavorstrap.scss'
-		}
+	files: {
+		'dist/flavorstrap.css':'src/flavorstrap.scss'
+	}
     }
   }
 });
