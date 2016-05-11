@@ -34,7 +34,7 @@ _Run this task with the `grunt flavorstrap` command._
 grunt.initConfig({
   flavorstrap: {
     options: {
-   	fast: false,
+   	    fast: false,
       	debug: false,
       	includePaths: ['']
     },
