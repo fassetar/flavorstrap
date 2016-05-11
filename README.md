@@ -40,7 +40,7 @@ grunt.initConfig({
     },
     target: {
         files: {
-                'dist/flavorstrap.css':'src/flavorstrap.scss'
+            'dist/flavorstrap.css':'src/flavorstrap.scss'
        }
     }
   }
