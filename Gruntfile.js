@@ -16,11 +16,11 @@ module.exports = function (grunt) {
         },
         flavorstrap: {			
             target: {
-				options: {
-					debug: true,
-					fast: false,
-					includePaths: [ "/ExampleFontawesome"]
-				},
+		options: {
+			debug: true,
+			fast: false,
+			includePaths: [ "/ExampleFontawesome"]
+		},
                 files:
                 {                      
                     src: 'test/flavorstrap.scss',
