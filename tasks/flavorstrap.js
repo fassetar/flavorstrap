@@ -16,10 +16,11 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
 
         var files = grunt.config.get('flavorstrap.target.files');
+        grunt.log.writeflags(this.options());
         var options = {
-            fast: (grunt.config.get('flavorstrap.target.options').fast) ? true : false,
-            debug: (grunt.config.get('flavorstrap.target.options').debug) ? true : false,
-            includePaths: grunt.config.get('flavorstrap.target.options').includePaths
+            fast: (this.options.fast) ? true : false,
+            debug: (this.options.debug) ? true : false,
+            includePaths: this.options.includePaths
         };
         //For both package testing and development.
         var defaultPaths = ['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/'];
@@ -29,14 +30,15 @@ module.exports = function (grunt) {
             files.dest = files.dest.substr(0, files.dest.lastIndexOf('.'));
             grunt.log.writeln(files.dest);
         }
-        grunt.initConfig({
+
+        grunt.config.merge({
             sass: {
                 target: {
                     files: [{
                         dest: (options.debug) ? (files.dest + '.sassed.css') : files.dest, src: files.src
                     }]
                 },
-                options: {                    
+                options: {
                     includePaths: (options.includePaths) ? options.includePaths.concat(defaultPaths) : defaultPaths
                 },
             },
