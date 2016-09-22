@@ -8,7 +8,7 @@
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles. For a more [ in-depth documentation](http://anthonyfassett.blogspot.com/2015/12/flavorstrap-npm-package-in-depth.html) and an example this project's test folder. This project bundles packages that work out this idea, the same could be done without this package but requires more configuration.
 
 ## Old Package (Flavorstrap)
- This repo has the previous name package [flavorstrap](https://github.com/fassetar/grunt-css-flavor)
+ This repo has the previous name package [flavorstrap's](https://github.com/fassetar/flavorstrap) history. Do not look in the flavorstrap repo or the history.
 
 Project [Stats](http://npm-stat.com/charts.html?package=flavorstrap&author=fassetar)
 
