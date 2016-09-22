@@ -1,7 +1,7 @@
-<h1><img src="logo.png">flavorstrap</h1>
-<a href="http://badge.fury.io/js/flavorstrap"><img src="https://badge.fury.io/js/flavorstrap.svg">
-<a href="https://travis-ci.org/fassetar/flavorstrap"><img src="https://travis-ci.org/fassetar/flavorstrap.svg?branch=master">
-<a href="https://david-dm.org/fassetar/flavorstrap"><img src="https://david-dm.org/fassetar/flavorstrap.svg"/><a/>
+<h1><img src="logo.png">grunt-css-flavor</h1>
+<a href="http://badge.fury.io/js/grunt-css-flavor"><img src="https://badge.fury.io/js/grunt-css-flavor.svg">
+<a href="https://travis-ci.org/fassetar/grunt-css-flavor"><img src="https://travis-ci.org/fassetar/grunt-css-flavor.svg?branch=master">
+<a href="https://david-dm.org/fassetar/grunt-css-flavor"><img src="https://david-dm.org/fassetar/grunt-css-flavor.svg"/><a/>
 <a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.svg"/></a>
 
 
@@ -32,7 +32,7 @@ _Run this task with the `grunt flavorstrap` command._
 
 ```js
 grunt.initConfig({
-  flavorstrap: {
+  grunt-css-flavor: {
     options: {
    	    fast: false,
       	debug: false,
@@ -40,7 +40,7 @@ grunt.initConfig({
     },
     target: {
         files: {
-            'dist/flavorstrap.css':'src/flavorstrap.scss'
+            'dist/bootstrap-flavor.css':'src/bootstrap-flavor.scss'
        }
     }
   }
@@ -49,7 +49,7 @@ grunt.initConfig({
 
 Create a scss file with your scss files to extend or overeride bootstrap's css.
 
-```flavorstrap.scss
+```bootstrap-flavor.scss
 @import "extend.scss";
 @import "bootstrap.scss";
 @import "override.scss";
@@ -104,4 +104,4 @@ Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 * 0.0.1 - Alpha test
 
 ## License
-Copyright (c) 2015 Anthony Fassett. Licensed under the GPL-3.0.
+Copyright (c) 2016 Anthony Fassett. Licensed under the GPL-3.0.
