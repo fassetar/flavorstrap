@@ -1,6 +1,6 @@
 {
   "name": "grunt-css-flavor",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "author": "Anthony Fassett",
   "description": "Create flavors not themes with sass libraries!",
   "main": "tasks/grunt-css-flavor.js",
