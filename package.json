@@ -1,18 +1,19 @@
 {
-  "name": "grunt-css-flavor",
-  "version": "1.0.0",
+  "name": "flavorstrap",
+  "version": "0.1.8",
   "author": "Anthony Fassett",
-  "description": "Create flavors not themes with sass libraries!",
-  "main": "tasks/grunt-css-flavor.js",
+  "description": "Create flavors not themes with bootstrap!",
+  "main": "tasks/flavorstrap.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fassetar/grunt-css-flavor.git"
+    "url": "https://github.com/fassetar/flavorstrap.git"
   },
   "keywords": [
-    "grunt",    
+    "grunt",
+    "bootstrap",
     "css",
     "sass",
     "compile",
@@ -24,18 +25,17 @@
   },
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/fassetar/grunt-css-flavor/issues"
+    "url": "https://github.com/fassetar/flavorstrap/issues"
   },
-  "homepage": "https://github.com/fassetar/grunt-css-flavor",
+  "homepage": "https://github.com/fassetar/flavorstrap",
   "dependencies": {
-    "autoprefixer": "^6.3.1",    
-    "chalk": "latest",
-    "css-purge": "latest",
-    "css-parse": "latest",
-    "node-sass": "latest",
-    "maxmin": "latest",
-    "clean-css": "latest",
-    "grunt": "1.0.1",    
+    "autoprefixer": "^6.3.1",
+    "bootstrap-sass": "^3.3.6",
+    "grunt": "1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-css-purge": "0.0.4",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.0.0"
   },
   "devDependencies": {
     "grunt-contrib-clean": "^1.0.0",
