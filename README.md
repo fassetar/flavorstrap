@@ -85,6 +85,14 @@ Better documentation coming soon...
 # Contributing
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
+## Future Outline 
+
+- support & examples with bootstrap 3 & 4
+- Remove dependency on grunt, make library pure nodejs
+- create child packages for grunt & gulp
+- support other major css libraries that are sass base.
+**Goal to reach all of these before the end of 2018.**
+
 ## Release History
 * 0.1.6 - Package update.
 * 0.1.5 - Added IncludePaths options.
