@@ -91,6 +91,7 @@ Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 - Remove dependency on grunt, make library pure nodejs
 - create child packages for grunt & gulp
 - support other major css libraries that are sass base.
+
 **Goal to reach all of these before the end of 2018.**
 
 ## Release History
