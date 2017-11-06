@@ -73,9 +73,9 @@ Type: `Array`
 
 This will include paths for the sass compiler. 
 
-#Multiple Flavor in a single project!
-You can use this project to group all your style development, having just a single grunt project with seperate flavor folders.
-Better documentation coming soon...
+### flavors (coming soon)
+Type: `Array`
+Default: `["bootstrap cdn url or a local file"]`
 
 
 # Workflow
