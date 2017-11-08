@@ -73,8 +73,8 @@ Type: `Array`
 
 This will include paths for the sass compiler. 
 
-### flavors (coming soon)
-Type: `Array`
+### files (coming soon)
+Type: `Array` or  `string`
 Default: `["bootstrap cdn url or a local file"]`
 
 
