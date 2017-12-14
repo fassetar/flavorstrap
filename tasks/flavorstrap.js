@@ -78,7 +78,7 @@ module.exports = function (grunt) {
         if (!options.fast) //Don't run in fast mode. 
         {
             grunt.task.run('css_purge');
-            grunt.task.run('postcss --force');
+            grunt.task.run('postcss');
             grunt.task.run('cssmin');
         }
     });
