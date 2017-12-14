@@ -18,9 +18,9 @@ module.exports = function (grunt) {
         var files = grunt.config.get('flavorstrap.target.files');
         grunt.log.writeflags(this.options());
         var options = {
-            fast: (this.options.fast) ? true : false,
-            debug: (this.options.debug) ? true : false,
-            includePaths: this.options.includePaths
+            fast: this.options.fast || false,
+            debug: this.options.debug || false,
+            includePaths: this.options.includePaths || ''
         };
         //For both package testing and development.
         var defaultPaths = ['node_modules/flavorstrap/node_modules/bootstrap-sass/assets/stylesheets/', 'node_modules/bootstrap-sass/assets/stylesheets/'];
