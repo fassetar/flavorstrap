@@ -1,4 +1,4 @@
-<h1><img src="logo.png">flavorstrap</h1>
+<h1><img src="small-logo.png">flavorstrap</h1>
 <a href="http://badge.fury.io/js/flavorstrap"><img src="https://badge.fury.io/js/flavorstrap.svg">
 <a href="https://travis-ci.org/fassetar/flavorstrap"><img src="https://travis-ci.org/fassetar/flavorstrap.svg?branch=master">
 <a href="https://david-dm.org/fassetar/flavorstrap"><img src="https://david-dm.org/fassetar/flavorstrap.svg"/><a/>
