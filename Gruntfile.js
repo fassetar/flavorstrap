@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('flavorstrap');
+    grunt.loadNpmTasks('./tasks/flavorstrap');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadTasks('tasks');
