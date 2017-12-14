@@ -77,11 +77,6 @@ This will include paths for the sass compiler.
 Type: `Array` or  `string`
 Default: `["bootstrap cdn url or a local file"]`
 
-
-# Workflow
-
-<img src="https://docs.google.com/drawings/d/1N-ve67CCCUi9YOIZipHALPWvmOc2mHh1oyIkshWAenw/pub?w=960&amp;h=720">
-
 # Contributing
 Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 
