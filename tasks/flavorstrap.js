@@ -7,7 +7,6 @@
  */
 
 module.exports = function (grunt) {
-    'use strict';
     require('grunt-sass/tasks/sass')(grunt);
     require('grunt-css-purge/tasks/css_purge')(grunt);
     require('grunt-postcss/tasks/postcss')(grunt);
