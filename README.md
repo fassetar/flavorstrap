@@ -106,4 +106,4 @@ Lint and test your code using the [Grunt](http://gruntjs.com/) task.
 * 0.0.1 - Alpha test
 
 ## License
-Copyright (c) 2015 Anthony Fassett. Licensed under the GPL-3.0.
+Copyright (c) 2018 fassetar. Licensed under the GPL-3.0.
