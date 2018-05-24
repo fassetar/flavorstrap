@@ -1,11 +1,11 @@
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function (grunt) {    
     grunt.initConfig({
         jshint: {
             all: [
-              'Gruntfile.js',
-              'tasks/*.js'
+                'Gruntfile.js',
+                'tasks/*.js'
             ],
             options: {
                 jshintrc: '.jshintrc'
@@ -14,26 +14,25 @@ module.exports = function (grunt) {
         clean: {
             tests: ['tmp']
         },
-        flavorstrap: {			
+        flavorstrap: {
             target: {
-		options: {
-			debug: true,
-			fast: false,
-			includePaths: [ "/ExampleFontawesome"]
-		},
+                options: {
+                    debug: true,
+                    fast: false,
+                    includePaths: ["/ExampleFontawesome"]
+                },
                 files:
-                {                      
-                    src: 'test/flavorstrap.scss',
-                    dest: 'dist/flavorstrap.css'
-                }
+                    {
+                        src: 'test/flavorstrap.scss',
+                        dest: 'dist/flavorstrap.css'
+                    }
             }
         }
     });
 
-    grunt.loadNpmTasks('flavorstrap');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadTasks('tasks');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-clean');    
 
     grunt.registerTask('test', ['clean', 'flavorstrap']);
     grunt.registerTask('default', ['flavorstrap']);
