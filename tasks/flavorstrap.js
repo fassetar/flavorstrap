@@ -2,7 +2,7 @@
  * flavorstrap
  * https://github.com/fassetar/flavorstrap
  *
- * Copyright (c) 2015 Anthony Fassett
+ * Copyright (c) 2018 fassetar
  * GPL-3.0 License.
  */
 
@@ -12,20 +12,25 @@ module.exports = function (grunt) {
     require('grunt-postcss/tasks/postcss')(grunt);
     require('grunt-contrib-cssmin/tasks/cssmin')(grunt);
 
-    var getAvailableFiles = function (filesArray) {
-        return filesArray.filter(function (filepath) {
-            if (!grunt.file.exists(filepath)) {
-                grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found');
-                return false;
-            }
-            return true;
-        });
-    };
-
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
 
         this.files.forEach(function (file) {
             grunt.log.writeflags(file, "TEST2");
+            var src = file.src.filter(function(filepath) {
+                if (!grunt.file.exists(filepath)) {
+                    grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found.');
+
+                    return false;
+                }
+
+                return true;
+            });
+
+            if (src.length === 0) {
+                grunt.log.error('No source files were found.');
+
+                //return done();
+            }
 
             var files = file;//grunt.config.get('flavorstrap.target.files');
 

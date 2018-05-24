@@ -15,27 +15,20 @@ module.exports = function (grunt) {
             tests: ['tmp']
         },
         flavorstrap: {
-            test: {
-                // files: {
-                //     'dist/flavorstrap.css': 'test/flavorstrap.scss',
-                //     'dist/flavorstrap2.css': 'test/flavorstrap2.scss'
-                // }
-                src: 'test/flavorstrap.scss',
-                dest: 'dist/flavorstrap.css',
-                options: {
-                    debug: true,
-                    fast: false
-                }
-            },
-            example: {
-                files: {
-                    'dist/flavorstrap2.css': 'test/flavorstrap2.scss'
-                },                
-                options: {
-                    debug: true,
-                    fast: true
-                }
+            target: {
+                files: [
+                    { src: ['test/flavorstrap.scss'], dest: 'dist/flavorstrap.css' }
+                ],
             }
+            // example: {
+            //     files: {
+            //         'dist/flavorstrap2.css': 'test/flavorstrap2.scss'
+            //     },                
+            //     options: {
+            //         debug: true,
+            //         fast: true
+            //     }
+            // }
             //,
             // options: {
             //     debug: true,
