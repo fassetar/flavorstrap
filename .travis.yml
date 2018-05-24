@@ -3,3 +3,8 @@ node_js:
 - 'stable'
 before_install: npm install -g grunt-cli
 install: npm install
+
+deploy:
+  provider: npm
+  email: "flavorstrap@logicoma.com"
+  api_key: "YOUR_AUTH_TOKEN"
