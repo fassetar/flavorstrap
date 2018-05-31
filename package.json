@@ -39,6 +39,7 @@
     "npm": "^6.1.0"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "1.0.0",
