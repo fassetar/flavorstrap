@@ -17,23 +17,27 @@ module.exports = function (grunt) {
         flavorstrap: {
             target: {
                 files: [
-                    { src: ['test/flavorstrap.scss'], dest: 'dist/flavorstrap.css' }
+                    { src: ['test/flavor/flavor.scss'], dest: 'dist/flavor/first-flavorstrap.css' },
+                    { src: ['test/second-flavor/flavor2.scss'], dest: 'dist/second-flavor/second-flavorstrap.css' }
                 ],
+                options: {
+                    debug: true,
+                    fast: false
+                }
+            },
+            example: {
+                files: {
+                    'dist/flavorstrap2.css': 'test/flavorstrap.scss'
+                },                
+                options: {
+                    debug: true,
+                    fast: true
+                }
+            },
+            options: {
+                debug: true,
+                fast: false
             }
-            // example: {
-            //     files: {
-            //         'dist/flavorstrap2.css': 'test/flavorstrap2.scss'
-            //     },                
-            //     options: {
-            //         debug: true,
-            //         fast: true
-            //     }
-            // }
-            //,
-            // options: {
-            //     debug: true,
-            //     fast: false
-            // }
         }
     });
 
