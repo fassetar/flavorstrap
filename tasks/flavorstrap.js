@@ -14,49 +14,51 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('flavorstrap', 'Create flavors not themes with bootstrap!', function () {
 
-        var options = {
-            debug: false,
-            includePaths: ''
-        };
-
-        files = this.files;        
-        //For both package testing and development.
-        var defaultPaths = ['node_modules/bootstrap-sass/assets/stylesheets/'];
+        options = this.options();
+        files = this.files;
+        grunt.log.writeln(options.includePaths);
 
         function Defunk(path) {
-            if (options.debug)
-                files.map(function (v) {
-                    v.previous = v.src;                    
-                    v.dest = String(v.dest).substr(0, String(v.dest).lastIndexOf('.')) + path;
+            var list;
+            //if (options.debug) {
+            if (typeof flag !== 'undefined' && flag)
+                list = files.map(function (v) {
+                    v.src = v.dest;
+                    grunt.log.writeln(true, v.src);
                     return v;
                 });
+
+            list = files.map(function (v) {
+                v.dest = String(v.dest).substr(0, String(v.dest).indexOf('.')) + path;
+                grunt.log.writeln(v.dest, v.src);
+                return v;
+            });
+            flag = true;
+            //}
+            return list;
         };
 
-
+        //console.log(Defunk('.sassed.css'));
         grunt.config.merge({
             sass: {
                 target: {
-                    files: Defunk('-sassed.css')
+                    files: Defunk('.sassed.css')
                 },
-                options: {
-                    includePaths: (options.includePaths) ? options.includePaths.concat(defaultPaths) : defaultPaths
-                }
+                options: options
             }, css_purge: {
                 target: {
-                    files: Defunk('-purged.css')
+                    files: Defunk('.purged.css')
                 }
-            },
-            postcss: {
+            }, postcss: {
                 options: {
                     processors: [
                         require('autoprefixer')({ browsers: ['last 2 version'] })
                     ]
                 },
                 target: {
-                    files: Defunk('-prefixed.css')
+                    files: files//Defunk('.prefixed.css')
                 }
-            },
-            cssmin: {
+            }, cssmin: {
                 options: {
                     shorthandCompacting: false,
                     roundingPrecision: -1,
@@ -69,12 +71,8 @@ module.exports = function (grunt) {
         });
 
         grunt.task.run('sass');
-        if (!options.debug) 
-        {
-            grunt.task.run('css_purge');
-            grunt.task.run('postcss');
-            grunt.task.run('cssmin');
-        }
-
+        //grunt.task.run('css_purge');
+        // grunt.task.run('postcss');
+        // grunt.task.run('cssmin');        
     });
 };

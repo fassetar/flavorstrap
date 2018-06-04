@@ -21,23 +21,19 @@ module.exports = function (grunt) {
                     { src: ['test/second-flavor/flavor2.scss'], dest: 'dist/second-flavor/second-flavorstrap.css' }
                 ],
                 options: {
-                    debug: true,
-                    fast: false
+                    includePaths : ['node_modules/bootstrap-sass/assets/stylesheets/'],
+                    debug: true                    
                 }
-            },
-            example: {
-                files: {
-                    'dist/flavorstrap2.css': 'test/flavorstrap.scss'
-                },                
-                options: {
-                    debug: true,
-                    fast: true
-                }
-            },
-            options: {
-                debug: true,
-                fast: false
             }
+            // ,
+            // example: {
+            //     files: {
+            //         'dist/flavorstrap2.css': 'test/flavorstrap.scss'
+            //     },                
+            //     options: {
+            //         debug: true
+            //     }
+            // }
         }
     });
 
