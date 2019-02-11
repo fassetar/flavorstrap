@@ -2,8 +2,6 @@
 <a href="http://badge.fury.io/js/flavorstrap"><img src="https://badge.fury.io/js/flavorstrap.svg">
 <a href="https://travis-ci.org/fassetar/flavorstrap"><img src="https://travis-ci.org/fassetar/flavorstrap.svg?branch=master">
 <a href="https://david-dm.org/fassetar/flavorstrap"><img src="https://david-dm.org/fassetar/flavorstrap.svg"/><a/>
-<a href="http://gruntjs.com/"><img src="https://cdn.gruntjs.com/builtwith.svg"/></a>
-
 
 Create flavors not themes with bootstrap! This package will allow you to create a SINGLE css and to organize your styles while taking advantage of bootstrap's styles. For a more [ in-depth documentation](http://anthonyfassett.blogspot.com/2015/12/flavorstrap-npm-package-in-depth.html) and an example this project's test folder. This project bundles packages that work out this idea, the same could be done without this package but requires more configuration.
 
